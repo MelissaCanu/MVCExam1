@@ -6,6 +6,9 @@
 
 <h2>Dati per decurtamento oltre 10 punti</h2>
 
+@Html.ActionLink("Indietro", "Index", "Home", null, new { @class = "btn btn-secondary" })
+
+
 <table class="table">
     <tr>
         <th>
@@ -28,27 +31,28 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IDanagrafica)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Importo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cognome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataViolazione)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDanagrafica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataViolazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+            </td>
+        </tr>
+    }
 
 </table>

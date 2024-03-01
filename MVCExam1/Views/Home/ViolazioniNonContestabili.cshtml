@@ -6,6 +6,8 @@
 
 <h2>Violazioni non contestabili</h2>
 
+@Html.ActionLink("Indietro", "Index", "Home", null, new { @class = "btn btn-secondary" })
+
 
 <table class="table">
     <tr>
@@ -21,18 +23,19 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IDviolazione)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descrizione)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Contestabile)
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDviolazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrizione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contestabile)
+            </td>
+        </tr>
+    }
 
 </table>
