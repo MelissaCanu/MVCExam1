@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MVCExam1.Models.TipoViolazione>
+
+@{
+    ViewBag.Title = "ViolazioniNonContestabili";
+}
+
+<h2>Violazioni non contestabili</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDviolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contestabile)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDviolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descrizione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contestabile)
+        </td>
+    </tr>
+}
+
+</table>

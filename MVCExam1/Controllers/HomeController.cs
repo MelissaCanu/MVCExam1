@@ -207,6 +207,44 @@ namespace MVCExam1.Controllers
             return View(listImportoSopra400);
         }
 
+        //action per mostrare le violazioni non contestabili
+        //mi baso sul model TipoViolazione
+
+        public ActionResult ViolazioniNonContestabili()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString.ToString();
+            SqlConnection connection = new SqlConnection(connectionString);
+            List<TipoViolazione> listViolazioniNonContestabili = new List<TipoViolazione>();
+
+            try
+            {   
+                //seleziono violazioni non contestabili dalla tabella TipoViolazione
+                string query = "SELECT * FROM TipoViolazione WHERE Contestabile = 0";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    TipoViolazione violazione = new TipoViolazione();
+                    violazione.IDviolazione = Convert.ToInt32(reader["IDviolazione"]);
+                    violazione.Descrizione = reader["Descrizione"].ToString();
+                    violazione.Contestabile = Convert.ToBoolean(reader["Contestabile"]);
+                    listViolazioniNonContestabili.Add(violazione);
+                }
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return View(listViolazioniNonContestabili);
+        }
 
 
 

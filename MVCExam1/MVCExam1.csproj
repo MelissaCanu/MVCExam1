@@ -197,6 +197,7 @@
     <Content Include="Views\Home\TrasgressorePunti.cshtml" />
     <Content Include="Views\Home\Sopra10.cshtml" />
     <Content Include="Views\Home\ImportoSopra400.cshtml" />
+    <Content Include="Views\Home\ViolazioniNonContestabili.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
