@@ -1,0 +1,76 @@
+﻿@model IEnumerable<MVCExam1.Models.Verbale>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Sezione Verbali</h2>
+
+<p>
+    @Html.ActionLink("Aggiungi Verbale", "CreateVer", null, new {@class="btn btn-warning"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDverbale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndirizzoViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NominativoAgente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataTrascrizioneVerbale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDanagrafica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDviolazione)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDverbale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndirizzoViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NominativoAgente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataTrascrizioneVerbale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDanagrafica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDviolazione)
+        </td>
+    </tr>
+}
+
+</table>

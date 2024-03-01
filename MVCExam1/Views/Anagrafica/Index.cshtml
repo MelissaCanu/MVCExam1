@@ -7,7 +7,7 @@
 <h2>Sezione Anagrafica</h2>
 
 <p>
-    @Html.ActionLink("Aggiungi Trasgressore", "CreateT", null, new {@class= "btn btn-success"})
+    @Html.ActionLink("Aggiungi Trasgressore", "CreateT", null, new {@class= "btn btn-warning"})
 </p>
 <table class="table">
     <tr>
@@ -58,11 +58,6 @@
         <td>
             @Html.DisplayFor(modelItem => item.CodFisc)
         </td>
-        <!--<td>-->
-            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
-        <!--</td>-->
     </tr>
 }
 

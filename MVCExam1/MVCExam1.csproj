@@ -187,10 +187,11 @@
     <Content Include="Views\Anagrafica\CreateT.cshtml" />
     <Content Include="Views\TipoViolazione\Index.cshtml" />
     <Content Include="Views\TipoViolazione\CreateVio.cshtml" />
+    <Content Include="Views\Verbale\CreateVer.cshtml" />
+    <Content Include="Views\Verbale\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Verbale\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
