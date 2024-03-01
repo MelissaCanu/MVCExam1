@@ -185,10 +185,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Anagrafica\Index.cshtml" />
     <Content Include="Views\Anagrafica\CreateT.cshtml" />
+    <Content Include="Views\TipoViolazione\Index.cshtml" />
+    <Content Include="Views\TipoViolazione\CreateVio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\TipoViolazione\" />
     <Folder Include="Views\Verbale\" />
   </ItemGroup>
   <ItemGroup>
