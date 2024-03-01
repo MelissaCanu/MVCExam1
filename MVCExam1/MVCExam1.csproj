@@ -128,7 +128,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Anagrafica.cs" />
+    <Compile Include="Models\ImportoSopra400.cs" />
+    <Compile Include="Models\Sopra10.cs" />
     <Compile Include="Models\TipoViolazione.cs" />
+    <Compile Include="Models\TrasgressorePunti.cs" />
     <Compile Include="Models\TrasgressoreVerbali.cs" />
     <Compile Include="Models\Verbale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -191,6 +194,9 @@
     <Content Include="Views\Verbale\CreateVer.cshtml" />
     <Content Include="Views\Verbale\Index.cshtml" />
     <Content Include="Views\Home\TotVerbaliPerTrasgressore.cshtml" />
+    <Content Include="Views\Home\TrasgressorePunti.cshtml" />
+    <Content Include="Views\Home\Sopra10.cshtml" />
+    <Content Include="Views\Home\ImportoSopra400.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

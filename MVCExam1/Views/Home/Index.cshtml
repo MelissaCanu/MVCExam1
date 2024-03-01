@@ -19,7 +19,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Totale dei punti decurtati per trasgressore</h5>
                     <p class="card-text">Visualizza il totale dei punti decurtati raggruppati per trasgressore.</p>
-                    <a href="@Url.Action("TotalePunti", "Anagrafica")" class="btn btn-primary">Visualizza</a>
+                    <a href="@Url.Action("TrasgressorePunti", "Home")" class="btn btn-primary">Visualizza</a>
                 </div>
             </div>
         </section>
@@ -28,7 +28,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Violazioni che superano i 10 punti</h5>
                     <p class="card-text">Visualizza importo, cognome, nome, data di violazione e decurtamento punti delle violazioni che superano i 10 punti.</p>
-                    <a href="@Url.Action("Violazioni10Punti", "Violazione")" class="btn btn-primary">Visualizza</a>
+                    <a href="@Url.Action("Sopra10", "Home")" class="btn btn-primary">Visualizza</a>
                 </div>
             </div>
         </section>
@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Violazioni con importo maggiore di 400 euro</h5>
                     <p class="card-text">Visualizza le violazioni il cui importo è maggiore di 400 euro.</p>
-                    <a href="@Url.Action("Violazioni400Euro", "Violazione")" class="btn btn-primary">Visualizza</a>
+                    <a href="@Url.Action("ImportoSopra400", "Home")" class="btn btn-primary">Visualizza</a>
                 </div>
             </div>
         </section>

@@ -1,10 +1,10 @@
-﻿@model IEnumerable<MVCExam1.Models.TrasgressoreVerbali>
+﻿@model IEnumerable<MVCExam1.Models.TrasgressorePunti>
 
 @{
-    ViewBag.Title = "TotVerbaliPerTrasgressore";
+    ViewBag.Title = "PuntiDecurtatiPerTrasgressore";
 }
 
-<h2>Totale verbali per trasgressore</h2>
+<h2>Totale punti decurtati per trasgressore</h2>
 
 <table class="table">
     <tr>
@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.Nome)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotVerbali)
+            @Html.DisplayNameFor(model => model.TotPunti)
         </th>
         <th></th>
     </tr>
@@ -35,9 +35,8 @@
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TotVerbali)
+            @Html.DisplayFor(modelItem => item.TotPunti)
         </td>
-
     </tr>
 }
 

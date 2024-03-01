@@ -1,15 +1,18 @@
-﻿@model IEnumerable<MVCExam1.Models.TrasgressoreVerbali>
+﻿@model IEnumerable<MVCExam1.Models.Sopra10>
 
 @{
-    ViewBag.Title = "TotVerbaliPerTrasgressore";
+    ViewBag.Title = "Sopra10";
 }
 
-<h2>Totale verbali per trasgressore</h2>
+<h2>Dati per decurtamento oltre 10 punti</h2>
 
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.IDanagrafica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Cognome)
@@ -18,9 +21,11 @@
             @Html.DisplayNameFor(model => model.Nome)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotVerbali)
+            @Html.DisplayNameFor(model => model.DataViolazione)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -29,15 +34,20 @@
             @Html.DisplayFor(modelItem => item.IDanagrafica)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Cognome)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TotVerbali)
+            @Html.DisplayFor(modelItem => item.DataViolazione)
         </td>
-
+        <td>
+            @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+        </td>
     </tr>
 }
 
