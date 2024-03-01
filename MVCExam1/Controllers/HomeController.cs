@@ -170,7 +170,7 @@ namespace MVCExam1.Controllers
             {
                 //seleziono IDanagrafica, importo, cognome, nome
                 //delle violazioni con importo maggiore di 400
-                string query = "SELECT A.IDanagrafica, A.Cognome, A.Nome, V.Importo " +
+                string query = "SELECT A.IDanagrafica, A.Cognome, A.Nome, V.IDviolazione, V.Importo " +
                 "FROM Anagrafica A JOIN Verbale V ON A.IDanagrafica = V.IDanagrafica " +
                 "WHERE V.Importo > 400";
 
@@ -188,6 +188,7 @@ namespace MVCExam1.Controllers
                 while (reader.Read())
                 {
                     ImportoSopra400 importoSopra400 = new ImportoSopra400();
+                    importoSopra400.IDviolazione = Convert.ToInt32(reader["IDviolazione"]);
                     importoSopra400.IDanagrafica = Convert.ToInt32(reader["IDanagrafica"]);
                     importoSopra400.Importo = Convert.ToDecimal(reader["Importo"]);
                     importoSopra400.Cognome = reader["Cognome"].ToString();
@@ -246,21 +247,5 @@ namespace MVCExam1.Controllers
             return View(listViolazioniNonContestabili);
         }
 
-
-
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

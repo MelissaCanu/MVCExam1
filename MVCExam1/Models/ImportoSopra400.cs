@@ -4,6 +4,7 @@ namespace MVCExam1.Models
 {
     public class ImportoSopra400
     {
+        public int IDviolazione { get; set; }
         public int IDanagrafica { get; set; }
         public string Cognome { get; set; }
         public string Nome { get; set; }
