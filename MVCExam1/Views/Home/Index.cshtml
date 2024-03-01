@@ -1,33 +1,45 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-
-<main>
+﻿<main>
     <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+        <h1 class="text-dark">Gestione delle contravvenzioni</h1>
+        <h2 class="text-warning mb-4">Seleziona l'operazione da eseguire:</h2>
     </section>
 
     <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <section class="col-md-4">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">Totale dei verbali per trasgressore</h5>
+                    <p class="card-text">Visualizza il totale dei verbali trascritti raggruppati per trasgressore.</p>
+                    <a href="@Url.Action("TotVerbaliPerTrasgressore", "Home")" class="btn btn-primary">Visualizza</a>
+                </div>
+            </div>
         </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <section class="col-md-4">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">Totale dei punti decurtati per trasgressore</h5>
+                    <p class="card-text">Visualizza il totale dei punti decurtati raggruppati per trasgressore.</p>
+                    <a href="@Url.Action("TotalePunti", "Anagrafica")" class="btn btn-primary">Visualizza</a>
+                </div>
+            </div>
         </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <section class="col-md-4">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">Violazioni che superano i 10 punti</h5>
+                    <p class="card-text">Visualizza importo, cognome, nome, data di violazione e decurtamento punti delle violazioni che superano i 10 punti.</p>
+                    <a href="@Url.Action("Violazioni10Punti", "Violazione")" class="btn btn-primary">Visualizza</a>
+                </div>
+            </div>
+        </section>
+        <section class="col-md-4">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">Violazioni con importo maggiore di 400 euro</h5>
+                    <p class="card-text">Visualizza le violazioni il cui importo è maggiore di 400 euro.</p>
+                    <a href="@Url.Action("Violazioni400Euro", "Violazione")" class="btn btn-primary">Visualizza</a>
+                </div>
+            </div>
         </section>
     </div>
 </main>
